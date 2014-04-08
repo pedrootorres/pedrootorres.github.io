@@ -12,38 +12,30 @@ $("#busca").keydown(function() {
 function suggestMovies () {
 	var text = $("#busca").val();
 	
-	var http = new XMLHttpRequest();
-	http.open("GET", "http://www.omdbapi.com/?s=" + text, false);
-	http.send(null);
+	$.ajax({
+		url: "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=qv67jaxpgqksy7cfvmcryhau&q=" + text,
 
-	var data = http.responseText;
-	var suggestions = eval("(" + data + ")");
+		dataType: 'jsonp',
 
-	$("#sugestoes").empty();
-	for (var i = 0; i < suggestions.Search.length; i++) {
-		$("#sugestoes").append("<a href='#' onclick='addMovie(this)' class='sugestao'><p id=sugestao" + i + ">" + suggestions.Search[i].Title + "</p></a>");
-	};
+		success: function(suggestions) {
+			for (var i = 0; i < suggestions.movies.length; i++) {
+				$("#sugestoes").append("<a href='#' onclick='addMovie(this)' class='sugestao'><p id=" + i + ">" + suggestions.movies[i].title + "</p></a>");
+			};
+		}
+	});
 };
 
 function addMovie(me) {
 	var movieName = $(me).first("p").text();
 	
 	$.ajax({
-		url: "http://www.omdbapi.com/?t=" + movieName,
-		
+		url: "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=qv67jaxpgqksy7cfvmcryhau&q=" + movieName,
+
 		dataType: 'jsonp',
 
-		success: function(movie) {
-			$("#filmes").append("<img src=" + movie.Poster + " class='filme'>");
+		success: function(movies) {
+			console.log(movies.movies[0]);
+			$("#filmes").append("<img src=" + movies.movies[0].posters.original + " class='filme'>");
 		}
 	});
-
-	// var http = new XMLHttpRequest();
-	// http.open("GET", "http://www.omdbapi.com/?t=" + movieName, false);
-	// http.send(null);
-
-	// var data = http.responseText;
-	// var movie = eval("(" + data + ")");
-
-	// $("#filmes").append("<img src=" + movie.Poster + " class='filme'>");
-}
+};
