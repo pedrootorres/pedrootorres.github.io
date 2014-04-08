@@ -21,6 +21,19 @@ function suggestMovies () {
 
 	$("#sugestoes").empty();
 	for (var i = 0; i < suggestions.Search.length; i++) {
-		$("#sugestoes").append("<a href='' class='sugestao'><p id=sugestao" + i + ">" + suggestions.Search[i].Title + "</p></a>");
+		$("#sugestoes").append("<a href='#' onclick='addMovie(this)' class='sugestao'><p id=sugestao" + i + ">" + suggestions.Search[i].Title + "</p></a>");
 	};
 };
+
+function addMovie(me) {
+	var movieName = $(me).first("p").text();
+	
+	var http = new XMLHttpRequest();
+	http.open("GET", "http://www.omdbapi.com/?t=" + movieName, false);
+	http.send(null);
+
+	var data = http.responseText;
+	var movie = eval("(" + data + ")");
+
+	$("#filmes").append("<img src=" + movie.Poster + " class='filme'>");
+}
