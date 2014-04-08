@@ -91,6 +91,10 @@ body {
 	font-size: 30px;
 }
 
+.sugestao:hover {
+	text-decoration: none;
+}
+
 #direita {
 	width: 60%;
 	height: auto;
