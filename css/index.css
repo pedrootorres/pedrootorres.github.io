@@ -86,6 +86,11 @@ body {
 	outline: 0;
 }
 
+#sugestoes {
+	color: #B60403;
+	font-size: 30px;
+}
+
 #direita {
 	width: 60%;
 	height: auto;
