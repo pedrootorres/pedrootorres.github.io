@@ -22,7 +22,7 @@ function suggestMovies () {
 
 		success: function(suggestions) {
 			for (var i = 0; i < suggestions.movies.length && i < 4; i++) {
-				$("#sugestoes").append("<a href='#' onclick='addMovie(this)' class='sugestao'><p id=" + i + ">" + suggestions.movies[i].title + "</p></a>");
+				$("#sugestoes").append("<a href='#' onclick='addMovie(this)' class='sugestao'><p id=" + i + " poster='" + suggestions.movies[i].posters.original + "' runtime='" + suggestions.movies[i].runtime + "'>" + suggestions.movies[i].title + "</p></a>");
 			};
 		}
 	});
@@ -31,24 +31,18 @@ function suggestMovies () {
 function addMovie(me) {
 	var movieName = $(me).first("p").text();
 	var position = me.getElementsByTagName('p')[0].id;
+	var poster = $(me.getElementsByTagName('p')[0]).attr("poster");
+	var runtime = $(me.getElementsByTagName('p')[0]).attr("runtime");
 
-	var runtime = 0;
-	$.ajax({
-		url: "http://api.rottentomatoes.com/api/public/v1.0/movies.json?apikey=qv67jaxpgqksy7cfvmcryhau&q=" + movieName,
+	calculateTime(runtime);
 
-		dataType: 'jsonp',
-
-		success: function(movies) {
-			$("#filmes").append("<img src=" + movies.movies[position].posters.original + " class='filme'>");
-			runtime = movies.movies[position].runtime;
-
-			calculateTime(runtime);
-		}
-	});
+	$("#filmes").append("<img src=" + poster + " class='filme'>");
 };
 
 function calculateTime(runtime) {
-	totalTime += runtime;
+	console.log(totalTime);
+	totalTime = totalTime + parseInt(runtime);
+	console.log(totalTime);
 
 	var hours = Math.floor(totalTime / 60);
 	var days = Math.floor(hours / 24);
