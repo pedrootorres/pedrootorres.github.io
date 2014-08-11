@@ -1,5 +1,5 @@
 function initialize() {
-  var ormskirk = new google.maps.LatLng(53.5693158,-2.8753524);
+  var ormskirk = new google.maps.LatLng(53.56894, -2.88506);
   var originalPosition = new google.maps.LatLng(49.5711465, 7.940688)
 
   var mapOptions = {
@@ -11,19 +11,30 @@ function initialize() {
 
   var home = 'img/home_icon.png'
 
-  var beachMarker = new google.maps.Marker({
+  var marker = new google.maps.Marker({
       position: ormskirk,
       map: map,
-      icon: home
+      icon: home,
+      title: "Ormskirk"
   });
 
-  $.ajax({
-    url: "data.json",
-    success: function (data) {
-      var obj = JSON.parse(data);
-      console.log(ahjdhsakjdha);
-    }
-  });
+  loadPlaces(map);
 }
 
+var places = [
+  {"name": "Liverpool", "lat": 53.40837, "lng": -2.99157},
+  {"name": "Dundee", "lat": 56.46202, "lng": -2.97072}
+];
+
+function loadPlaces(map) {
+  for(var i = 0; i < places.length; i++) {
+    var placesMarkers = new google.maps.Marker({
+      position: new google.maps.LatLng(places[i].lat, places[i].lng),
+      map: map,
+      title: places[i].name
+    });
+  }
+}
+
+loadPlaces();
 google.maps.event.addDomListener(window, 'load', initialize);
