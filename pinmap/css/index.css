@@ -1,0 +1,22 @@
+html { 
+	height: 100%
+}
+
+body { 
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#leftMenu {
+	background-color: red;
+	position: absolute;
+	z-index: 1;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#map-canvas {
+	height: 100%;
+	position: relative;
+}
