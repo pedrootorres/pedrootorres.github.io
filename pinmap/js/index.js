@@ -21,7 +21,7 @@ function initialize() {
     url: "data.json",
     success: function (data) {
       var obj = JSON.parse(data);
-      console.log(obj.menu);
+      console.log(ahjdhsakjdha);
     }
   });
 }
