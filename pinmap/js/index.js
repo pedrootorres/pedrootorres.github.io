@@ -16,13 +16,14 @@ function initialize() {
       map: map,
       icon: home
   });
+
+  $.ajax({
+    url: "data.json",
+    success: function (data) {
+      var obj = JSON.parse(data);
+      console.log(obj.menu);
+    }
+  });
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
-$.ajax({
-  url: "data.json",
-  success: function (data) {
-    var obj = JSON.parse(data);
-  }
-});
