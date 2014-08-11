@@ -5,12 +5,37 @@
 		<meta charset="utf-8"/> 
 
 		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	    <link rel="stylesheet" type="text/css" href="css/index.css">
 	</head>
 
 	<body>
-		<div id="leftMenu">
-			<h1>teste</h1>
+		<div id="leftMenu" class="panel panel-default">
+			<div class="panel-heading">
+				<h3 class="panel-title">Places I've been</h3>
+			</div>
+
+			<div class="panel-body">
+				<div class="panel-group" id="accordion">
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+						<h5 class="panel-title">England</h5>
+					</a>
+						<div id="collapse1" class="panel-collapse collapse">
+							<div class="panel-body cities">
+								<p>Ormskirk</p>
+								<p>Liverpool</p>
+							</div>
+						</div>
+					<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+						<h5 class="panel-title">Scotland</h5>
+					</a>
+						<div id="collapse2" class="panel-collapse collapse">
+							<div class="panel-body cities">
+								<p>Dundee</p>
+							</div>
+						</div>
+				</div>
+			</div>
 		</div>
 		<div id="map-canvas"></div>
 	</body>
@@ -18,5 +43,5 @@
 	<script type="text/javascript"  src="js/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_OBKKJEOZnV_Wg-hVG-biePre4WNd5_U"></script>
 	<script type="text/javascript" src="js/index.js"></script>
-	<script type="text/javascript" src=""></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
 </html>
