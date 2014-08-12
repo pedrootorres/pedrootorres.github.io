@@ -15,14 +15,6 @@ body {
 	margin-top: 20px;
 }
 
-/*h5 {
-	padding-bottom: 20px;
-}
-
-.cities {
-	margin-top: -20px;
-}*/
-
 #map-canvas {
 	height: 100%;
 	position: relative;
