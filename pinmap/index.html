@@ -12,31 +12,20 @@
 	<body>
 		<div id="leftMenu" class="panel panel-primary">
 			<div class="panel-heading">
-				<h3 class="panel-title">Places I've been</h3>
+				<h3 class="panel-title" id="titlePlaces">Places I've been</h3>
 			</div>
 
-			<div class="panel-body">
+			<div class="panel-body" id="countries">
 				<div id="accordion">
 					<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-						<h4 class="">England</h4>
+						<h4 id="England">England</h4>
 					</a>
-						<div id="collapse1" class="panel-collapse collapse">
-							<div class="cities">
-								<p>Ormskirk</p>
-								<p>Liverpool</p>
-								<p>Lake District</p>
-							</div>
-						</div>
 
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-						<h4 class="">Scotland</h4>
-					</a>
-						<div id="collapse2" class="panel-collapse collapse">
-							<div class="cities">
-								<p>Dundee</p>
-								<p>Pitlochry</p>
-							</div>
+					<div id="collapse1" class="panel-collapse collapse">
+						<div class="cities" id="citiesEngland">
+							<p>Ormskirk</p>
 						</div>
+					</div>
 				</div>
 			</div>
 		</div>
