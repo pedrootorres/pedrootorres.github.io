@@ -10,21 +10,35 @@
 	</head>
 
 	<body>
-		<div id="leftMenu" class="panel panel-primary">
-			<div class="panel-heading">
-				<h3 class="panel-title" id="titlePlaces">Places I've been</h3>
+		<div id="menus">
+			<div id="leftMenu" class="panel panel-primary">
+				<div class="panel-heading">
+					<h3 class="panel-title" id="titlePlaces">Places I've been</h3>
+				</div>
+
+				<div class="panel-body" id="countries">
+					<div id="accordion">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+							<h4 id="England">England</h4>
+						</a>
+
+						<div id="collapse1" class="panel-collapse collapse">
+							<div class="cities" id="citiesEngland">
+								<p>Ormskirk</p>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 
-			<div class="panel-body" id="countries">
-				<div id="accordion">
-					<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-						<h4 id="England">England</h4>
-					</a>
+			<div id="rightMenu" class="panel panel-danger">
+				<div class="panel-heading">
+					<h3 class="panel-title" id="titleFriends"><input type="checkbox" id="friendsCheckbox"> Friends' hometowns</h3>
+				</div>
 
-					<div id="collapse1" class="panel-collapse collapse">
-						<div class="cities" id="citiesEngland">
-							<p>Ormskirk</p>
-						</div>
+				<div class="panel-body" id="countries2">
+					<div id="accordion2">
+
 					</div>
 				</div>
 			</div>
