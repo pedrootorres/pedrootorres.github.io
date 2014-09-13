@@ -16,7 +16,7 @@ function initialize() {
       map: map,
       icon: home,
       title: "Ormskirk",
-      html: "<div class='caption'><h3>Ormskirk</h3><p class='text-justify'>Home of Edge Hill University, it's a really small town with only 24k people. There is not much to do, but it is a lovely place. And yes, I study here.</p><p class='text-justify'><strong>Cool things I did here:</strong> Study :P</p></div>"
+      html: "<div class='caption'><h3>Ormskirk</h3><p class='text-justify'>Home of Edge Hill University, it's a really small town with only 24k people. There is not much to do, but it is a lovely place. And yes, I study here.</p><p class='text-justify'><strong>Cool things I did here:</strong> Study :P, Kart</p></div>"
   });
 
   var infoWindow = new google.maps.InfoWindow({
@@ -54,7 +54,11 @@ function initialize() {
     {"name": "Chandigarh", "country": "India", "lat": 30.73331, "lng": 76.77942},
     {"name": "Xichang", "country": "China", "lat": 27.89450, "lng": 102.26445},
     {"name": "Zhongshan", "country": "China", "lat": 22.51700, "lng": 113.39272},
-    {"name": "Liverpool", "country": "England", "lat": 53.40883, "lng": -2.93115}
+    {"name": "York", "country": "England", "lat": 53.95997, "lng": -1.08730},
+    {"name": "Santa Maria Capua Vetere", "country": "Italy", "lat": 41.08209, "lng": 14.25419},
+    {"name": "Jeonju", "country": "Korea", "lat": 35.82422, "lng": 127.14795},
+    {"name": "Iksan", "country": "Korea", "lat": 35.94829, "lng": 126.95760},
+    {"name": "Daejeon", "country": "Korea", "lat": 36.35041, "lng": 127.38455},
   ];
 
   loadPlaces(map, places);
@@ -69,6 +73,8 @@ function initialize() {
       for (var i = 0; i < friendsMarker.length; i++) {
         friendsMarker[i].setMap(null);
       };
+
+      $("#accordion2").empty();
     }
   })
 
