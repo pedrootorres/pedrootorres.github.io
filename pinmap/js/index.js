@@ -59,6 +59,8 @@ function initialize() {
     {"name": "Jeonju", "country": "Korea", "lat": 35.82422, "lng": 127.14795},
     {"name": "Iksan", "country": "Korea", "lat": 35.94829, "lng": 126.95760},
     {"name": "Daejeon", "country": "Korea", "lat": 36.35041, "lng": 127.38455},
+    {"name": "Oldenburg", "country": "Germany", "lat": 53.14345, "lng": 8.21455},
+    {"name": "London", "country": "England", "lat": 51.50735, "lng": -0.12776},
   ];
 
   loadPlaces(map, places);
