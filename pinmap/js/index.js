@@ -33,7 +33,8 @@ function initialize() {
     {"name": "Liverpool", "country": "England", "lat": 53.40837, "lng": -2.99157, "info": "<div class='caption'><h3>Liverpool</h3><p class='text-justify'>Famous for being the home town of The Beatles. It was also the European City of Culture in 2008 and the home port of the Titanic.</p><p class='text-justify'><strong>Cool things I did here:</strong> The Cavern Club, Titanic Museum, Zip Wire</p></div>"},
     {"name": "Dundee", "country": "Scotland", "lat": 56.46202, "lng": -2.97072, "info": "<div class='caption'><h3>Dundee</h3><p class='text-justify'>4th biggest city of Scotland, it still has many victorian architecture. The University of Dundee is one of the top medical schools in the UK.</p><p class='text-justify'><strong>Cool things I did here:</strong> Laser tag</p></div>"},
     {"name": "Pitlochry", "country": "Scotland", "lat": 56.69918, "lng": -3.71735, "info": "<div class='caption'><h3>Pitlochry</h3><p class='text-justify'>Tourist town, particularly known as a centre for hillwaking and radical sports, surrounded by mountains.</p><p class='text-justify'><strong>Cool things I did here:</strong> Bungee Jump</p></div>"},
-    {"name": "Lake District","country": "England", "lat": 54.46087, "lng": -3.08863, "info": "<div class='caption'><h3>Lake District</h3><p class='text-justify'>A National Park that includes the deepest and longest lakes in Europe and the highest mountain (978m). It is a very popular holiday destination. </p><p class='text-justify'><strong>Cool things I did here:</strong> Boat trip around the lake</p></div>"}
+    {"name": "Lake District", "country": "England", "lat": 54.46087, "lng": -3.08863, "info": "<div class='caption'><h3>Lake District</h3><p class='text-justify'>A National Park that includes the deepest and longest lakes in Europe and the highest mountain (978m). It is a very popular holiday destination. </p><p class='text-justify'><strong>Cool things I did here:</strong> Boat trip around the lake</p></div>"},
+    {"name": "Conwy", "country": "Wales", "lat": 53.28287, "lng": -3.82948, "info": "<div class='caption'><h3>Conwy</h3><p class='text-justify'>A city surrounded by walls of an old castle in ruins. And it's also the city of the smallest house in the United Kingdom.</p><p class='text-justify'><strong>Cool things I did here:</strong> First castle i visited</p></div>"},
   ];
 
   var friends =[
@@ -61,6 +62,9 @@ function initialize() {
     {"name": "Daejeon", "country": "Korea", "lat": 36.35041, "lng": 127.38455},
     {"name": "Oldenburg", "country": "Germany", "lat": 53.14345, "lng": 8.21455},
     {"name": "London", "country": "England", "lat": 51.50735, "lng": -0.12776},
+    {"name": "Manchester", "country": "England", "lat": 53.47932, "lng": -2.24849},
+    {"name": "London", "country": "England", "lat": 51.50735, "lng": -0.12776},
+    {"name": "Heywood", "country": "England", "lat": 53.59263, "lng": -2.22565},
   ];
 
   loadPlaces(map, places);
