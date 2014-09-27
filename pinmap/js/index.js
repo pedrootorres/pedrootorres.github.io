@@ -66,6 +66,7 @@ function initialize() {
     {"name": "London", "country": "England", "lat": 51.50735, "lng": -0.12776},
     {"name": "Heywood", "country": "England", "lat": 53.59263, "lng": -2.22565},
     {"name": "Huesca", "country": "Spain", "lat": 42.13184, "lng": -0.40781},
+    {"name": "Zaragoza", "country": "Spain", "lat": 41.64882, "lng": -0.88909},
   ];
 
   loadPlaces(map, places);
