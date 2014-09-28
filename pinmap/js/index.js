@@ -63,10 +63,10 @@ function initialize() {
     {"name": "Oldenburg", "country": "Germany", "lat": 53.14345, "lng": 8.21455},
     {"name": "London", "country": "England", "lat": 51.50735, "lng": -0.12776},
     {"name": "Manchester", "country": "England", "lat": 53.47932, "lng": -2.24849},
-    {"name": "London", "country": "England", "lat": 51.50735, "lng": -0.12776},
     {"name": "Heywood", "country": "England", "lat": 53.59263, "lng": -2.22565},
     {"name": "Huesca", "country": "Spain", "lat": 42.13184, "lng": -0.40781},
     {"name": "Zaragoza", "country": "Spain", "lat": 41.64882, "lng": -0.88909},
+    {"name": "Mülheim an der Ruhr", "country": "Germany", "lat": 51.41857, "lng": 6.88452},
   ];
 
   loadPlaces(map, places);
