@@ -70,6 +70,7 @@ function initialize() {
     {"name": "Freehold", "country": "USA", "lat": 40.22438, "lng": -74.29905},
     {"name": "Oklahoma", "country": "USA", "lat": 35.46756, "lng": -97.51643},
     {"name": "Caen", "country": "France", "lat": 49.18286, "lng": -0.37068},
+    {"name": "Guadalajara", "country": "Mexico", "lat": 20.65970, "lng": -103.34961},
   ];
 
   loadPlaces(map, places);
