@@ -67,6 +67,8 @@ function initialize() {
     {"name": "Huesca", "country": "Spain", "lat": 42.13184, "lng": -0.40781},
     {"name": "Zaragoza", "country": "Spain", "lat": 41.64882, "lng": -0.88909},
     {"name": "Mülheim an der Ruhr", "country": "Germany", "lat": 51.41857, "lng": 6.88452},
+    {"name": "Freehold", "country": "USA", "lat": 40.22438, "lng": -74.29905},
+    {"name": "Oklahoma", "country": "USA", "lat": 35.46756, "lng": -97.51643},
   ];
 
   loadPlaces(map, places);
