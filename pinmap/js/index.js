@@ -72,6 +72,7 @@ function initialize() {
     {"name": "Caen", "country": "France", "lat": 49.18286, "lng": -0.37068},
     {"name": "Guadalajara", "country": "Mexico", "lat": 20.65970, "lng": -103.34961},
     {"name": "Amfreville-Sur-Iton", "country": "France", "lat": 49.14717, "lng": 1.14912},
+    {"name": "Hong Kong", "country": "China", "lat": 22.39865, "lng": 114.09465},
   ];
 
   loadPlaces(map, places);
