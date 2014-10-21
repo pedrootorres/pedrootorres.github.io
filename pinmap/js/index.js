@@ -35,6 +35,13 @@ function initialize() {
     {"name": "Pitlochry", "country": "Scotland", "lat": 56.69918, "lng": -3.71735, "info": "<div class='caption'><h3>Pitlochry</h3><p class='text-justify'>Tourist town, particularly known as a centre for hillwaking and radical sports, surrounded by mountains.</p><p class='text-justify'><strong>Cool things I did here:</strong> Bungee Jump</p></div>"},
     {"name": "Lake District", "country": "England", "lat": 54.46087, "lng": -3.08863, "info": "<div class='caption'><h3>Lake District</h3><p class='text-justify'>A National Park that includes the deepest and longest lakes in Europe and the highest mountain (978m). It is a very popular holiday destination. </p><p class='text-justify'><strong>Cool things I did here:</strong> Boat trip around the lake</p></div>"},
     {"name": "Conwy", "country": "Wales", "lat": 53.28287, "lng": -3.82948, "info": "<div class='caption'><h3>Conwy</h3><p class='text-justify'>A city surrounded by walls of an old castle in ruins. And it's also the city of the smallest house in the United Kingdom.</p><p class='text-justify'><strong>Cool things I did here:</strong> First castle i visited</p></div>"},
+    {"name": "Dublin", "country": "Ireland", "lat": 53.34981, "lng": -6.26031, "info": "<div class='caption'><h3>Dublin</h3><p class='text-justify'>Capital of Ireland, Dublin is a small city with both modern and medieval architecture. There you can find the Trinity College, Christ Church Cathedral and many others churches.</p><p class='text-justify'><strong>Cool things I did here:</strong> Guiness Storehouse</p></div>"},
+    {"name": "Galway", "country": "Ireland", "lat": 53.27056, "lng": -9.05667, "info": "<div class='caption'><h3>Galway</h3><p class='text-justify'>Galway is the biggest city close to a lot of natural attractions, like the Cliffs of Moher. Therefore, it is the place where the tours depart from.</p><p class='text-justify'><strong>Cool things I did here:</strong> -</p></div>"},
+    {"name": "Liscannor", "country": "Ireland", "lat": 52.97188, "lng": -9.42651, "info": "<div class='caption'><h3>Liscannor</h3><p class='text-justify'>Home of the Cliffs of Moher, Ireland's most visited natural attraction.</p><p class='text-justify'><strong>Cool things I did here:</strong> Cliffs of Moher</p></div>"},
+    {"name": "Ballyvaughan", "country": "Ireland", "lat": 53.08913, "lng": -9.14367, "info": "<div class='caption'><h3>Ballyvaughan</h3><p class='text-justify'>Home of the Aillwee Cave</p><p class='text-justify'><strong>Cool things I did here:</strong> Aillwee Cave</p></div>"},
+    {"name": "Belfast", "country": "Northen Ireland", "lat": 54.59729, "lng": -5.93012, "info": "<div class='caption'><h3>Belfast</h3><p class='text-justify'>Belfast is the capital of Northen Ireland which is part of the UK. It is known for the shipbuilder Harland and Wolff that built the Titanic. Also, Belfast is close to some natural attractions and to places where Game of Thrones was filmed.</p><p class='text-justify'><strong>Cool things I did here:</strong> Titanic Museum</p></div>"},
+    {"name": "Bushmills", "country": "Northen Ireland", "lat": 55.24081, "lng": -6.51156, "info": "<div class='caption'><h3>Bushmills</h3><p class='text-justify'>40.000 hexagonal columns resulted of a volcanic eruption.</p><p class='text-justify'><strong>Cool things I did here:</strong> Giant's Causeway</p></div>"},
+    {"name": "Carrick-A-Rede", "country": "Northen Ireland", "lat": 55.23947, "lng": -6.33267, "info": "<div class='caption'><h3>Carrick-a-Rede</h3><p class='text-justify'>It's a bridge that links the mainland to the island of Carrickarede.</p><p class='text-justify'><strong>Cool things I did here:</strong> Carrick-a-Rede (rope bridge)</p></div>"},
   ];
 
   var friends =[
@@ -116,11 +123,11 @@ function loadPlaces(map, places) {
       infoWindow.open(map, this);
     })
 
-    if($("#"+places[i].country).length == 0 ){
-      $("#accordion").append('<a data-toggle="collapse" data-parent="#accordion" href="#collapse'+collapse+'"><h4 id="'+places[i].country+'">'+places[i].country+'</h4></a><div id="collapse'+collapse+'" class="panel-collapse collapse"><div class="cities" id="cities'+places[i].country+'"><p>'+places[i].name+'</p></div></div>');
+    if($("#"+places[i].country.replace(" ", "_")).length == 0 ){
+      $("#accordion").append('<a data-toggle="collapse" data-parent="#accordion" href="#collapse'+collapse+'"><h4 id="'+places[i].country.replace(" ", "_")+'">'+places[i].country+'</h4></a><div id="collapse'+collapse+'" class="panel-collapse collapse"><div class="cities" id="cities'+places[i].country.replace(" ", "_")+'"><p>'+places[i].name+'</p></div></div>');
       collapse++;
     } else {
-      $("#cities"+places[i].country).append('<p>'+places[i].name+'</p>');
+      $("#cities"+places[i].country.replace(" ", "_")).append('<p>'+places[i].name+'</p>');
     }
   }
 }
