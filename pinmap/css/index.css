@@ -10,7 +10,7 @@ body {
 
 #menus {
 	position: fixed;
-	width: 100%;
+	/*width: -210px;*/
 	z-index: 1;
 	height: 80%;
 }
