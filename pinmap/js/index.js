@@ -1,9 +1,17 @@
+$(".panel-heading").click(function() {
+  if($("#leftMenu").css("margin-left") != "0px") {
+    $("#leftMenu").animate({"margin-left": "0px"}, 500);
+  } else {
+    $("#leftMenu").animate({"margin-left": "-200px"}, 500);
+  }
+});
+
 function initialize() {
   var ormskirk = new google.maps.LatLng(53.56894, -2.88506);
-  var originalPosition = new google.maps.LatLng(49.5711465, 7.940688)
+  var originalPosition = new google.maps.LatLng(30, 0)
 
   var mapOptions = {
-    zoom: 5,
+    zoom: 3,
     center: originalPosition,
     disableDefaultUI: true
   }
@@ -43,11 +51,12 @@ function initialize() {
     {"name": "Bushmills", "country": "Northen Ireland", "lat": 55.24081, "lng": -6.51156, "info": "<div class='caption'><h3>Bushmills</h3><p class='text-justify'>40.000 hexagonal columns resulted of a volcanic eruption.</p><p class='text-justify'><strong>Cool things I did here:</strong> Giant's Causeway</p></div>"},
     {"name": "Carrick-A-Rede", "country": "Northen Ireland", "lat": 55.23947, "lng": -6.33267, "info": "<div class='caption'><h3>Carrick-a-Rede</h3><p class='text-justify'>It's a bridge that links the mainland to the island of Carrickarede.</p><p class='text-justify'><strong>Cool things I did here:</strong> Carrick-a-Rede (rope bridge)</p></div>"},
     {"name": "Paris", "country": "France", "lat": 48.85661, "lng": 2.35222, "info": "<div class='caption'><h3>Paris</h3><p class='text-justify'>'The City of Light'. Paris is the capital of France, famous for its culture and monuments.</p><p class='text-justify'><strong>Cool things I did here:</strong> Drive a Ferrari, Eiffel Tower, Notre Dame, Triumphal Arch, Pont des Arts, Louvre Museum, Catacombs, Palace of Versailles, Moulin Rouge</p></div>"},
-    {"name": "Manchester", "country": "England", "lat": 53.48076, "lng": -2.24263, "info": "<div class='caption'><h3>Manchester</h3><p class='text-justify'>United Kingdom's second most populous urban. Manchester was the site of the world's first railway station and is where scientists first split the atom.</p><p class='text-justify'><strong>Cool things I did here:</strong> Indoor skiing, Cloud 23</p></div>"},
+    {"name": "Manchester", "country": "England", "lat": 53.48076, "lng": -2.24263, "info": "<div class='caption'><h3>Manchester</h3><p class='text-justify'>United Kingdom's second most populous urban. Manchester was the site of the world's first railway station and is where scientists first split the atom.</p><p class='text-justify'><strong>Cool things I did here:</strong> Indoor skiing, Cloud 23, Indoor Skydiving</p></div>"},
     {"name": "Monthey", "country": "Switzerland", "lat": 46.25642, "lng": 6.95717, "info": "<div class='caption'><h3>Monthey</h3><p class='text-justify'>Small city with a population of 17.000. It is located on the french part of Switzerland.</p><p class='text-justify'><strong>Cool things I did here:</strong> First time I saw snow on a mountain!</p></div>"},
     {"name": "Milan", "country": "Italy", "lat": 45.46542, "lng": 9.18592, "info": "<div class='caption'><h3>Milan</h3><p class='text-justify'>Milan is not only the most richest city in Italy, but also the main industrial, commercial and financial centre of the country.</p><p class='text-justify'><strong>Cool things I did here:</strong> Galleria Vittorio Emanuele II, Duomo di Milano</p></div>"},
     {"name": "Pisa", "country": "Italy", "lat": 43.72284, "lng": 10.40169, "info": "<div class='caption'><h3>Pisa</h3><p class='text-justify'>Really small town basically known by its leaning tower.</p><p class='text-justify'><strong>Cool things I did here:</strong> Tower of Pisa, Best Gnocchi </p></div>"},
     {"name": "Rome", "country": "Italy", "lat": 41.90278, "lng": 12.49637, "info": "<div class='caption'><h3>Rome</h3><p class='text-justify'>Capital of Italy and 'Capital of the World'. Rome is a city-museum with buildings, monuments and ruins everywhere.</p><p class='text-justify'><strong>Cool things I did here:</strong> Piazza Venezia, Piazza del Popolo, Pantheon, Colosseum, Fontana di Trevi, Piazza Navona, Foro Romano, Palatino, Città del Vaticano</p></div>"},
+    {"name": "Vatican City", "country": "Vatican City", "lat": 41.90292, "lng": 12.45339, "info": "<div class='caption'><h3>Vatican City</h3><p class='text-justify'>Smallest country in the world, the Città del Vaticano is the home of the catholic church, where the Pope lives.</p><p class='text-justify'><strong>Cool things I did here:</strong> Vatican museum, The Creation of Adam, La Pieta</p></div>"},
     {"name": "Genoa", "country": "Italy", "lat": 44.40565, "lng": 8.94626, "info": "<div class='caption'><h3>Genoa</h3><p class='text-justify'>One of the best Christmas lunches I had in my life, with a genuine Italian family. An wonderful experience I had luck to have.</p><p class='text-justify'><strong>Cool things I did here:</strong> Spent Christmas with an Italian family</p></div>"},
     {"name": "Florence", "country": "Italy", "lat": 43.77103, "lng": 11.24800, "info": "<div class='caption'><h3>Florence</h3><p class='text-justify'>Centre of medieval European trade and finance, Florence is the birthplace of Renaissance.</p><p class='text-justify'><strong>Cool things I did here:</strong> Duomo di Firenze, Ponte Vecchio, Piazzale Michelangelo</p></div>"},
     {"name": "Bologne", "country": "Italy", "lat": 44.49489, "lng": 11.34262, "info": "<div class='caption'><h3>Bologne</h3><p class='text-justify'>Bologne is known by its towers and its 7 secrets</p><p class='text-justify'><strong>Cool things I did here:</strong> Fontana del Netuno, Piazza Maggiore, Towers of Bologne</p></div>"},
@@ -76,6 +85,11 @@ function initialize() {
     {"name": "Óbidos", "country": "Portugal", "lat": 39.36042, "lng": -9.15820, "info": "<div class='caption'><h3>Óbidos</h3><p class='text-justify'>Really small city surrounded by walls of an old castle</p><p class='text-justify'><strong>Cool things I did here:</strong> Óbidos Castle</p></div>"},
     {"name": "Porto", "country": "Portugal", "lat": 41.15794, "lng": -8.62911, "info": "<div class='caption'><h3>Porto</h3><p class='text-justify'>Second largest city in Portugal, Porto is the home of the port wine</p><p class='text-justify'><strong>Cool things I did here:</strong> Best cheese I've ever had</p></div>"},
     {"name": "Guimarães", "country": "Portugal", "lat": 41.44253, "lng": -8.29179, "info": "<div class='caption'><h3>Guimarães</h3><p class='text-justify'>City in the district of Braga, Guimarães was the birthplace of the first king of Portugal, Afonso I</p><p class='text-justify'><strong>Cool things I did here:</strong> Paço do Duque de Bragança</p></div>"},
+    {"name": "Derby", "country": "England", "lat": 52.92253, "lng": -1.47462, "info": "<div class='caption'><h3>Derby</h3><p class='text-justify'>Derby is home of the first factory in the world and considered the birthplace of the Industrial Revolution</p><p class='text-justify'><strong>Cool things I did here:</strong> Download Festival</p></div>"},
+    {"name": "Bristol", "country": "England", "lat": 51.45451, "lng": -2.58791, "info": "<div class='caption'><h3>Bristol</h3><p class='text-justify'>Sixth biggest city in England, Bristol is built around the River Avon. It is also know by its hot air balloons.</p><p class='text-justify'><strong>Cool things I did here:</strong> Suspension Bridge</p></div>"},
+    {"name": "Southport", "country": "England", "lat": 53.64571, "lng": -3.01011, "info": "<div class='caption'><h3>Southport</h3><p class='text-justify'>Seaside town in the northeast of England. Has a small amusement park called Pleasureland.</p><p class='text-justify'><strong>Cool things I did here:</strong> First beach in England</p></div>"},
+    {"name": "Blackpool", "country": "England", "lat": 53.81751, "lng": -3.03567, "info": "<div class='caption'><h3>Blackpool</h3><p class='text-justify'>Another seaside town in the northeast of England, noted for its political autonomy, independent of Lancashire county. Main attractions are: Blackpool Zoo, Illumination and Tower, Pleasure Beach and Winter Gardens.</p><p class='text-justify'><strong>Cool things I did here:</strong> Blackpool Pleasure Beach</p></div>"},
+    {"name": "Salford", "country": "England", "lat": 53.48752, "lng": -2.29013, "info": "<div class='caption'><h3>Salford</h3><p class='text-justify'>City part of Greater Manchester, covers an area that includes Eccles, Swinton and Pendlebury.</p><p class='text-justify'><strong>Cool things I did here:</strong> Work in the BBC Sport in MediaCityUK</p></div>"},
   ];
 
   var friends =[

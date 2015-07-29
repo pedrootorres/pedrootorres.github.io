@@ -15,9 +15,22 @@ body {
 	height: 10px;
 }
 
-#leftMenu {
+.panel-heading {
+	width: 250px;
+	cursor: pointer;
+}
+
+#titlePlaces {
 	float: left;
-	margin-left: 20px;
+}
+
+#airplane {
+	margin-left: 53px;
+}
+
+#leftMenu {
+	/*float: left;*/
+	margin-left: -200px;
 	margin-top: 20px;
 	width: 210px;
 }
