@@ -212,12 +212,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 if ( window.addEventListener ) {
   var egg = [];
-  var be = "76,85,67,65,83";
+  var be = "76,85,67,65,83"; //lucas
+  var georgia = '83,84,85,80,73,68'; //stupid
 
   window.addEventListener("keydown", function(e){
     egg.push( e.keyCode );
     if ( egg.toString().indexOf( be ) >= 0 ) {
       $("#be").modal('show');
+
+      egg = [];
+    } else if( egg.toString().indexOf(georgia) >= 0) {
+      $("#georgia").modal('show');
 
       egg = [];
     }
