@@ -1,5 +1,11 @@
 body {
 	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+h1 {
+	margin: 0;
 }
 
 #menu {
@@ -9,12 +15,13 @@ body {
 	margin: 0;
 	text-align: center;
 	color: white;
+	/*float: left;*/
 }
 
 #map {
 	background-color: rgb(59, 62, 65);
-	/*background-color: red;*/
 	position: absolute;
+	margin-left: -2px;
 	height: 50px;
 	width: 50px;
 	text-align: center;
@@ -29,6 +36,18 @@ body {
 
 #map span {
 	font-size: 2em;
+	top: 50%;
+  	transform: translateY(-50%);
+}
+
+#main {
+	text-align: center;
+	height: 100%;
+	width: 100%;
+}
+
+#main h1 {
+	position: relative;
 	top: 50%;
   	transform: translateY(-50%);
 }

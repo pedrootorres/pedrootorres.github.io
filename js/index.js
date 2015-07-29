@@ -1,5 +1,5 @@
 $("#map").hover(function() {
-	$("#map").css("margin-left", "20px");
+	$("#map").animate({"margin-left": "20px"}, 150);
 }, function() {
-	$("#map").css("margin-left", "0px");
+	$("#map").animate({"margin-left": "-2px"}, 150);
 });
