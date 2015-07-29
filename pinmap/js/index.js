@@ -213,7 +213,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 if ( window.addEventListener ) {
   var egg = [];
   var be = "76,85,67,65,83"; //lucas
-  var georgia = '83,84,85,80,73,68'; //stupid
+  var georgia1 = '83,84,85,80,73,68'; //stupid
+  var georgia2 = '83,72,65,87,84,89'; //shawty
 
   window.addEventListener("keydown", function(e){
     egg.push( e.keyCode );
@@ -221,7 +222,7 @@ if ( window.addEventListener ) {
       $("#be").modal('show');
 
       egg = [];
-    } else if( egg.toString().indexOf(georgia) >= 0) {
+    } else if( egg.toString().indexOf(georgia1) >= 0 || egg.toString().indexOf(georgia2) >= 0) {
       $("#georgia").modal('show');
 
       egg = [];
