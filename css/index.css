@@ -1,7 +1,6 @@
 body {
 	margin: 0;
 	padding: 0;
-	display: flex;
 }
 
 h1 {
@@ -15,7 +14,8 @@ h1 {
 	margin: 0;
 	text-align: center;
 	color: white;
-	/*float: left;*/
+	position: fixed;
+	z-index: 99;
 }
 
 #map {
@@ -41,6 +41,8 @@ h1 {
 }
 
 #main {
+	background-color: red;
+	margin-left: 50px;
 	text-align: center;
 	height: 100%;
 	width: 100%;
