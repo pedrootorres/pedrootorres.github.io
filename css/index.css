@@ -17,27 +17,40 @@ h1 {
 	z-index: 99;
 }
 
-#map {
-	background-color: rgb(59, 62, 65);
+#options {
+	/*background-color: rgb(59, 62, 65);*/
+	/*background-color: red;*/
 	position: absolute;
-	margin-left: -2px;
-	height: 50px;
+	/*margin-left: -2px;*/
+	/*height: 100px;*/
+	/*padding-top: 30px;*/
 	width: 50px;
 	text-align: center;
-
-	-webkit-border-radius: 5px; 
-	-moz-border-radius: 5px; 
-	border-radius: 5px; 
-	cursor: pointer;
 
   	top: 50%;
   	transform: translateY(-50%);
 }
 
-#map span {
+#options span {
 	font-size: 2em;
+	background-color: rgb(59, 62, 65);
+	/*background-color: red;*/
+
 	top: 50%;
   	transform: translateY(-50%);
+
+  	margin-bottom: 10px;
+  	margin-left: -40px;
+	padding-top: 10px;
+	padding-left: 40px;
+
+  	width: 90px;
+	height: 50px;
+
+	-webkit-border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	border-radius: 5px; 
+	cursor: pointer;
 }
 
 #main {	
