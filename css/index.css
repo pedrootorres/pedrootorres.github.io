@@ -70,3 +70,40 @@ a {
 	top: 50%;
   	transform: translateY(-50%);
 }
+
+@media screen and (max-width: 900px) {
+    #menu {
+ 		height: 50px;
+		width: 100%;
+		background-color: rgb(59, 62, 65);
+		position: relative;
+		text-align: center;
+    }
+
+   	#options {
+		width: 150px;
+		height: 50px;
+		background-color: red;
+
+   	}
+
+   	#options span {
+		font-size: 2em;
+		background-color: rgb(59, 62, 65);
+
+	  	margin-bottom: 0px;
+	  	margin-left: 0px;
+		padding-left: 0px;
+		padding-top: 10px;
+
+	  	width: 50px;
+		height: 50px;
+
+		-webkit-border-radius: 5px; 
+		-moz-border-radius: 5px; 
+		border-radius: 5px; 
+
+		cursor: pointer;
+		color: white;
+	}
+}

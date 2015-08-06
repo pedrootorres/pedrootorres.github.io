@@ -1,0 +1,16 @@
+#container {
+	margin-left: 50px;
+}
+
+#top {
+	background-color: rgba(164, 164, 164, 0.7);
+	height: 25%;
+	min-height: 100px;
+	color: rgb(62, 64, 67);
+	padding-left: 30px;
+	padding-top: 10px;
+}
+
+#top p {
+	padding-top: 30px;
+}
