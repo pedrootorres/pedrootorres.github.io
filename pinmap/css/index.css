@@ -28,26 +28,41 @@ body {
 	margin-left: 53px;
 }
 
+#gift {
+	margin-left: 135px;
+}
+
 #leftMenu {
 	/*float: left;*/
 	margin-left: -200px;
 	margin-top: 20px;
 	width: 210px;
+	position: absolute;
+	height: 100%;
+	z-index: 2;
 }
 
-#rightMenu {
+#leftMenuWishList {
+	margin-left: -200px;
+	margin-top: 60px;
+	width: 210px;
+	position: absolute;
+	z-index: 1;
+}
+
+/*#rightMenu {
 	float: right;
 	margin-right: 20px;
 	margin-top: 20px;
 	width: 210px;
-}
+}*/
 
 #countries, #countries2 {
 	max-height: 90%;
 	overflow: auto;
 }
 
-#accordion, #accordion2 {
+.accordion, #accordion2 {
 	margin-top: -10px;
 	margin-bottom: -10px;
 }
