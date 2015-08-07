@@ -220,6 +220,7 @@ function loadWishList(map, wishList) {
     var placesMarkers = new google.maps.Marker({
       position: new google.maps.LatLng(wishList[i].lat, wishList[i].lng),
       map: map,
+      icon: "img/wish_icon.png",
       title: wishList[i].name
     });
 
