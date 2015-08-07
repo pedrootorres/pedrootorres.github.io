@@ -21,15 +21,15 @@ body {
 }
 
 #titlePlaces {
-	float: left;
+	display: inline;
 }
 
 #airplane {
-	margin-left: 53px;
+	float: right;
 }
 
 #gift {
-	margin-left: 135px;
+	float: right;
 }
 
 #leftMenu {

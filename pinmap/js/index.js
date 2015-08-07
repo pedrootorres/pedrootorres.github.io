@@ -128,7 +128,11 @@ function initialize() {
   // ];
 
   var wishList = [
-    {"name": "Istanbul", "country": "Turkey", "lat": 41.00824, "lng": 28.97836}
+    {"name": "Istanbul", "country": "Turkey", "lat": 41.00824, "lng": 28.97836},
+    {"name": "Moscow", "country": "Russia", "lat": 55.75583, "lng": 37.61730},
+    {"name": "Barcelona", "country": "Spain", "lat": 41.38506, "lng": 2.17340},
+    {"name": "Madrid", "country": "Spain", "lat": 40.41678, "lng": -3.70379},
+    {"name": "Reykjavik", "country": "Iceland", "lat": 64.13573, "lng": -21.84623},
   ];
 
   loadPlaces(map, places);
@@ -166,16 +170,19 @@ function initialize() {
       $("#leftMenuWishList").animate({"margin-left": "0px"}, 200);
       $("#leftMenuWishList").css("z-index", "99");
       $("#leftMenuWishList").animate({"margin-top": "20px"}, 200);
-      loadWishList(map, wishList, friendsMarker);
+      loadWishList(map, wishList);
     } else {
+      for (var i = 0; i < wishList.length; i++) {
+        wishListMarkers[i].setMap(null);
+        console.log("passou");
+      };
+      wishListMarkers = [];
+      $("#accordionWishList").empty();
+
       $("#leftMenuWishList").animate({"margin-top": "60px"}, 200);
       $("#leftMenuWishList").animate({"margin-left": "-200px"}, 200);
       $("#leftMenuWishList").css("z-index", "1");
-      for (var i = 0; i < wishList.length; i++) {
-        wishListMarkers[i].setMap(null);
-      };
 
-      $("#accordionWishList").empty();
     }
   });
 }
@@ -227,12 +234,14 @@ function loadWishList(map, wishList) {
     wishListMarkers.push(placesMarkers);
 
     if($("#"+wishList[i].country.replace(" ", "_") + "2").length == 0 ){
-      $("#accordionWishList").append('<a data-toggle="collapse" data-parent="#accordionWishList" href="#collapseWish'+collapseWish+'"><h4 id="'+wishList[i].country.replace(" ", "_")+'">'+wishList[i].country+'</h4></a><div id="collapseWish'+collapseWish+'" class="panel-collapse collapse"><div class="cities" id="citiesWish'+wishList[i].country.replace(" ", "_")+'"><p>'+wishList[i].name+'</p></div></div>');
+      $("#accordionWishList").append('<a data-toggle="collapse" data-parent="#accordionWishList" href="#collapseWish'+collapseWish+'"><h4 id="'+wishList[i].country.replace(" ", "_")+'2">'+wishList[i].country+'</h4></a><div id="collapseWish'+collapseWish+'" class="panel-collapse collapse"><div class="cities" id="citiesWish'+wishList[i].country.replace(" ", "_")+'"><p>'+wishList[i].name+'</p></div></div>');
       collapseWish++;
     } else {
       $("#citiesWish"+wishList[i].country.replace(" ", "_")).append('<p>'+wishList[i].name+'</p>');
     }
   }
+
+  console.log(wishListMarkers);
 }
 
 // function loadFriends(map, friends, friendsMarker) {
