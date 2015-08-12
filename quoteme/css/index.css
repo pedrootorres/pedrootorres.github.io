@@ -1,0 +1,39 @@
+body {
+	background-image: url("../img/main-background2.jpg");
+	background-repeat:no-repeat;
+	background-position:center;
+}
+
+#container {
+	display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#middle {
+	display: table-cell;
+    vertical-align: middle;
+}
+
+#quoteForm {
+	display: none;
+ 	margin-left: auto;
+    margin-right: auto; 
+    width: 50%;
+    min-width: 300px;
+    padding: 30px;
+	border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.btn {
+	margin-top: 10px;
+}
+
+#quoteReady {
+	display: none;
+}
