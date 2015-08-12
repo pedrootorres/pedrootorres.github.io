@@ -1,9 +1,9 @@
 // https://soundcloud.com/bnglory09/why-do-we-fall-motivational -> songs
 var playQuote = function(quote, author) {
 	var audio = new Audio();
-	console.log(author);
 
 	audio.src = "https://translate.google.pl/translate_tts?ie=UTF-8&tl=pt-br&q=" + quote + "&total=1&idx=0&client=t&prev=input";
+	console.log(audio.src);
 	audio.play();
 
 	$("body").append('<iframe id="backgroundSong" width="0" height="0" src="https://youtube.com/embed/8-wIg90lagk?start=50&autoplay=1"></iframe>');
