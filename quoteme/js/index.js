@@ -6,6 +6,8 @@ var playQuote = function(quote, author) {
 	audio.src = "https://translate.google.pl/translate_tts?ie=UTF-8&tl=pt-br&q=" + quote + "&total=1&idx=0&client=t&prev=input";
 	audio.play();
 
+	$("body").append('<iframe id="backgroundSong" width="0" height="0" src="https://youtube.com/embed/8-wIg90lagk?start=50&autoplay=1"></iframe>');
+
 	audio.addEventListener("ended", function() {
 		var audio2 = new Audio();
 		audio2.src = "https://translate.google.pl/translate_tts?ie=UTF-8&tl=pt-br&q=" + author + "&total=1&idx=0&client=t&prev=input";
@@ -26,7 +28,6 @@ if(window.location.href.indexOf("?quote=") == -1) {
 
 $("#quoteIt").click(function(e) {
 	e.preventDefault();
-	$("body").append('<iframe id="backgroundSong" width="0" height="0" src="https://youtube.com/embed/8-wIg90lagk?start=50&autoplay=1"></iframe>');
 
 	var quote = $("#quote").val();
 	var author = $("#author").val().split(' ');
