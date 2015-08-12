@@ -1,7 +1,7 @@
 // https://soundcloud.com/bnglory09/why-do-we-fall-motivational -> songs
 var playQuote = function(quote, author) {
 	var audio = new Audio();
-
+	console.log("quote", quote);
 	audio.src = "https://translate.google.pl/translate_tts?ie=UTF-8&tl=pt-br&q=" + quote + "&total=1&idx=0&client=t&prev=input";
 	console.log(audio.src);
 	audio.play();
@@ -19,7 +19,7 @@ if(window.location.href.indexOf("?quote=") == -1) {
 	$("#quoteForm").show();
 } else {
 	var url = window.location.href;
-	var quote = url.substring(url.indexOf("?quote=") + 7);
+	var quote = url.substring(url.indexOf("?quote=") + 7, url.indexOf("&surname"));
 	var author = url.substring(url.indexOf("&surname=") + 9, url.indexOf("&name")) + ". " + url.substring(url.indexOf("&name=") + 6);
 
 	$("#quoteReady").show();
