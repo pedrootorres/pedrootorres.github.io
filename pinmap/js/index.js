@@ -287,17 +287,22 @@ if ( window.addEventListener ) {
   var be = "76,85,67,65,83"; //lucas
   var georgia1 = '83,84,85,80,73,68'; //stupid
   var georgia2 = '83,72,65,87,84,89'; //shawty
+  var ju = "74,85" // ju
 
   window.addEventListener("keydown", function(e){
     egg.push( e.keyCode );
     if ( egg.toString().indexOf( be ) >= 0 ) {
-      $("#be").modal('show');
+    	$("#be").modal('show');
 
       egg = [];
     } else if( egg.toString().indexOf(georgia1) >= 0 || egg.toString().indexOf(georgia2) >= 0) {
-      $("#georgia").modal('show');
+    	$("#georgia").modal('show');
 
-      egg = [];
+		egg = [];
+    } else if(egg.toString().indexOf(ju) >= 0) {
+    	$("#ju").modal('show');
+
+    	egg = [];
     }
   }, true);
 }
