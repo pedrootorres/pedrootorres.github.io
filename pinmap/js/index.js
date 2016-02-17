@@ -286,7 +286,7 @@ if ( window.addEventListener ) {
   var egg = [];
   var be = "76,85,67,65,83"; //lucas
   var georgia1 = '83,84,85,80,73,68'; //stupid
-  //var georgia2 = '83,72,65,87,84,89'; //shawty
+  var georgia2 = '83,72,65,87,84,89'; //shawty
   var ju = "74,85" // ju
 
   window.addEventListener("keydown", function(e){
@@ -296,7 +296,7 @@ if ( window.addEventListener ) {
 
       egg = [];
     } else if( egg.toString().indexOf(georgia1) >= 0 || egg.toString().indexOf(georgia2) >= 0) {
-    	$("#georgia").modal('show');
+    	// $("#georgia").modal('show');
 
 		egg = [];
     } else if(egg.toString().indexOf(ju) >= 0) {
