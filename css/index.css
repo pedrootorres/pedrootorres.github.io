@@ -15,41 +15,26 @@ a {
 	width: 50px;
 	height: 100%;
 	background-color: rgb(59, 62, 65);
-	text-align: center;
 	color: white;
 	position: fixed;
-	z-index: 99;
+	z-index: 2;
 }
 
 #options {
-	/*background-color: rgb(59, 62, 65);*/
-	/*background-color: red;*/
 	position: absolute;
-	/*margin-left: -2px;*/
-	/*height: 100px;*/
-	/*padding-top: 30px;*/
 	width: 50px;
 	text-align: center;
-
   	top: 50%;
   	transform: translateY(-50%);
-  	
-  	/*Fix for mobile*/
-  	/*margin-top: -100px;*/
 }
 
-#options span {
+#options i {
 	font-size: 2em;
 	background-color: rgb(59, 62, 65);
-	/*background-color: red;*/
 
-  	margin-bottom: 10px;
-  	margin-left: -40px;
-	padding-top: 10px;
-	padding-left: 40px;
-
-  	width: 90px;
-	height: 50px;
+	height: 100%;
+	width: 50px;
+	padding: 10px 0;
 
 	-webkit-border-radius: 5px; 
 	-moz-border-radius: 5px; 
@@ -80,30 +65,21 @@ a {
 		text-align: center;
     }
 
-   	#options {
-		width: 150px;
-		height: 50px;
-		background-color: red;
+    #options {
+    	width: 100%;
+		position: relative;
+		text-align: center;
+		top: 0;
+		left: 50%;
+	  	transform: translateX(-50%);
+	}
 
-   	}
+	#options i {
+		background-color: transparent;
+	}
 
-   	#options span {
-		font-size: 2em;
-		background-color: rgb(59, 62, 65);
-
-	  	margin-bottom: 0px;
-	  	margin-left: 0px;
-		padding-left: 0px;
-		padding-top: 10px;
-
-	  	width: 50px;
-		height: 50px;
-
-		-webkit-border-radius: 5px; 
-		-moz-border-radius: 5px; 
-		border-radius: 5px; 
-
-		cursor: pointer;
-		color: white;
+	#main {
+		margin-left: 0;
+		text-align: center;
 	}
 }

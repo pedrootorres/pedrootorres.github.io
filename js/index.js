@@ -1,5 +1,11 @@
-$("#options span").hover(function() {
-	$(this).animate({"margin-left": "-10px"}, 150);
+$("#options i").hover(function() {
+	$(this).stop().animate({
+		"width": "90px",
+		"padding-left": "40px"
+	}, 150);
 }, function() {
-	$(this).animate({"margin-left": "-40px"}, 150);
+	$(this).stop().animate({
+		"width": "50px",
+		"padding-left": "0px"
+	}, 150);
 });
