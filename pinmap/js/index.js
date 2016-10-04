@@ -1,5 +1,4 @@
 function initialize() {
-	var ormskirk = new google.maps.LatLng(53.56894, -2.88506);
 	var originalPosition = new google.maps.LatLng(30, 0);
 
 	var mapOptions = {
@@ -12,23 +11,47 @@ function initialize() {
 
 	var home = 'img/home_icon.png';
 
-	var marker = new google.maps.Marker({
-		position: ormskirk,
-		map: map,
-		icon: home,
-		title: "Ormskirk",
-		html: "<div class='caption'><h3>Ormskirk</h3><p class='text-justify'>Home of Edge Hill University, it's a really small town with only 24k people. There is not much to do, but it is a lovely place. And yes, I study here.</p><p class='text-justify'><strong>Cool things I did here:</strong> Study :P, Kart</p></div>"
-	});
+	var ormskirk = new google.maps.LatLng(53.56894, -2.88506);
+	var recife = new google.maps.LatLng(-8.0476, -34.8770);
+	var rio = new google.maps.LatLng(-22.9068, -43.1729);
+
+	var placesILived = [
+		new google.maps.Marker({
+			position: recife,
+			map: map,
+			icon: home,
+			title: "Recife",
+			html: "<div class='caption'><h3>Recife</h3><p class='text-justify'>Born and raised till I was 22. Recife is my city. Known as the Brazilian Venice, Recife is a wonderful place, with a nice beach and the best carnival of the World!</p><p class='text-justify'><strong>Cool things I did here:</strong> I was born, rappel</p></div>"
+		}),
+
+		new google.maps.Marker({
+			position: ormskirk,
+			map: map,
+			icon: home,
+			title: "Ormskirk",
+			html: "<div class='caption'><h3>Ormskirk</h3><p class='text-justify'>Home of Edge Hill University, it's a really small town with only 24k people. There is not much to do, but it is a lovely place. And yes, I study here.</p><p class='text-justify'><strong>Cool things I did here:</strong> Uni, Kart</p></div>"
+		}),
+
+		new google.maps.Marker({
+			position: rio,
+			map: map,
+			icon: home,
+			title: "Rio de Janeiro",
+			html: "<div class='caption'><h3>Rio de Janeiro</h3><p class='text-justify'>The Marvelous City. Rio is the most visited city in Brazil and hosted the Olympic Games in 2016. I moved here when I was 23 to start working after graduating.</p><p class='text-justify'><strong>Cool things I did here:</strong> Sugarloaf cable car, rent my first apartment</p></div>"
+		}),
+	];
 
 	var infoWindow = new google.maps.InfoWindow({
 		content: "wait for it",
 		maxWidth: 200
 	});
 
-	google.maps.event.addListener(marker, 'click', function() {
-		infoWindow.setContent(this.html);
-		infoWindow.open(map, this);
-	});
+	for(var i = 0; i < placesILived.length; i++) {
+		google.maps.event.addListener(placesILived[i], 'click', function() {
+			infoWindow.setContent(this.html);
+			infoWindow.open(map, this);
+		});
+	}
 
 	var places = [
 		{"name": "Minneapolis", "country": "USA", "lat": 44.97775, "lng": -93.26501, "info": "<div class='caption'><h3>Minneapolis</h3><p class='text-justify'>14th largest metropolitan area in the United States</p><p class='text-justify'><strong>Cool things I did here:</strong> Won a robotic championship</p></div>"},
